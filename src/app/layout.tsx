@@ -16,20 +16,18 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Stremio Web",
+  title: "Stremio Web Modern",
   description: "Stremio Web rewrite with a modern tech stack",
 };
 
-export default function RootLayout({
+export default ({
   children,
 }: Readonly<{
   children: ReactNode;
-}>) {
-  return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
-      </body>
-    </html>
-  );
-}
+}>) => (
+  <html lang="en">
+    <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      {children}
+    </body>
+  </html>
+);
